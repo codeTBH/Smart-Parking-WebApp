@@ -1,0 +1,25 @@
+{
+  "name": "parking-lot-management",
+  "version": "1.0.0",
+  "description": "A web application for managing parking lots and spots.",
+  "main": "server.js",
+  "proxy": "http://localhost:3000",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "author": "Subhankar Panda",
+  "license": "MIT"
+}

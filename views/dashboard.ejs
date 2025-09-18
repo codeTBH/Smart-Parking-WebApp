@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking - Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Smart Parking Dashboard - Welcome <%= user.username %></h2>
+        <div id="filters">
+            <button data-zone="">All</button>
+            <button data-zone="Standard">Standard</button>
+            <button data-zone="Handicap">Handicap</button>
+            <button data-zone="EV Charger">EV Charger</button>
+        </div>
+        <div id="spotsContainer">
+            <% spots.forEach(spot => { %>
+                <button class="<%= spot.status %>" data-spot-id="<%= spot.spot_id %>" data-zone="<%= spot.zone %>"><%= spot.spot_id %></button>
+            <% }); %>
+        </div>
+        <div id="currentSpot"></div>
+    </div>
+    <script type="module" src="/script.js"></script>
+</body>
+</html>
